@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import se.lexicon.model.Car;
+import se.lexicon.model.MyList;
 import se.lexicon.model.Saab;
 import se.lexicon.model.Volvo;
 
@@ -15,6 +16,9 @@ public class App
         hashSet();
         hashMap();
         HashMap2();
+
+        myList();
+        myList2();
     }
 
     public static void arrayList(){
@@ -99,6 +103,44 @@ public class App
             System.out.println(", Value: " + carStorage.get(key));
         }
         System.out.println("--------------------------");
+    }
+
+
+    public static void myList(){
+
+        MyList<Car> carStorage = new MyList<>();
+
+        carStorage.add(new Volvo("V70", 9001));
+
+        Saab saab = new Saab("95", 150);
+
+        carStorage.add(saab);
+
+
+        System.out.println("carStorage.getByIndex() = " +
+                carStorage.getByIndex(carStorage.indexOf(saab))
+                );
+
+    }
+
+
+    private static void myList2() {
+        MyList<Object> myObjList = new MyList<Object>();
+        MyList<Volvo> myVolvos = new MyList<>();
+        MyList<Saab> mySaabs = new MyList();
+
+        Car bmw = new Car("BMW", "525i");
+        Saab saab = new Saab("900S", 260);
+        Volvo volvo = new Volvo("740", 123);
+
+        myObjList.add(bmw);
+        myObjList.add(volvo);
+        myObjList.add(saab);
+        myObjList.add("Hello coders!");
+
+        myVolvos.add(volvo);
+
+        mySaabs.add(saab);
     }
 
 
