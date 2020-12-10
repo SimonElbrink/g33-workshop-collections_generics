@@ -18,4 +18,15 @@ public class Saab extends Car{
     public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
     }
+
+    @Override
+    public String toString() {
+
+        return "Saab{" +
+                "id=" + super.getId() +
+                ", brand='" + super.getBrand() + '\'' +
+                ", model='" + super.getModel() + '\'' +
+                "horsePower=" + horsePower +
+                '}';
+    }
 }

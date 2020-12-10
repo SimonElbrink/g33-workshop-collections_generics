@@ -18,4 +18,15 @@ public class Volvo extends Car{
     public void setLoadCapacity(double loadCapacity) {
         this.loadCapacity = loadCapacity;
     }
+
+    @Override
+    public String toString() {
+
+        return "Volvo{" +
+                "id=" + super.getId() +
+                ", brand='" + super.getBrand() + '\'' +
+                ", model='" + super.getModel() + '\'' +
+                "loadCapacity=" + loadCapacity +
+                '}';
+    }
 }
